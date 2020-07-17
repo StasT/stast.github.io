@@ -4,7 +4,405 @@
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+		
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"columnSpacing": 6,
+					"columnWidth": 0.67,
+					"dataDateFormat": "",
+					"rotate": true,
+					"startDuration": 1,
+					"startEffect": "easeOutSine",
+					"fontSize": 10,
+					"categoryAxis": {
+						"gridPosition": "start",
+						"position": "left",
+						"axisColor": "#D4D4D4",
+						"color": "#888888",
+						"dashLength": 2,
+						"fontSize": 10,
+						"gridColor": "#888888",
+						"gridThickness": 0,
+						"minorTickLength": -3,
+						"minVerticalGap": 25,
+						"tickLength": 1,
+						"title": "Builder Name",
+						"titleColor": "#282828",
+						"titleFontSize": 12
+					},
+					"chartCursor": {
+						"enabled": true
+					},
+					"chartScrollbar": {
+						"enabled": true,
+						"graphType": "line"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonColor": "undefined",
+							"fillAlphas": 1,
+							"fillColors": "#67B7DC",
+							"gapPeriod": 1,
+							"id": "AmGraph-1",
+							"lineColor": "#D4D4D4",
+							"lineThickness": 0,
+							"title": "graph 1",
+							"type": "column",
+							"valueField": "column-1"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"duration": "ss",
+							"id": "ValueAxis-1",
+							"position": "bottom",
+							"treatZeroAs": 3,
+							"axisThickness": 0,
+							"firstDayOfWeek": 0,
+							"gridColor": "#282828",
+							"offset": -2,
+							"title": "was_red",
+							"titleColor": "#282828",
+							"titleFontSize": 12,
+							"titleRotation": -2
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [
+						{
+							"color": "#282828",
+							"id": "Title-1",
+							"size": 14,
+							"text": "The longest time each builder was red during the week:"
+						}
+					],
+					"dataProvider": [
+						{
+							"column-1": "81047",
+							"category": "llvm-clang-lld-x86_64-scei-ps4-ubuntu-fast"
+						},
+						{
+							"column-1": "65084",
+							"category": "clang-x64-windows-msvc"
+						},
+						{
+							"column-1": "34633",
+							"category": "llvm-clang-x86_64-expensive-checks-win"
+						},
+						{
+							"column-1": "34271",
+							"category": "llvm-clang-lld-x86_64-scei-ps4-windows10pro-fast"
+						},
+						{
+							"column-1": "33065",
+							"category": "clang-cmake-thumbv7-full-sh"
+						},
+						{
+							"column-1": "29486",
+							"category": "clang-cmake-aarch64-lld"
+						},
+						{
+							"column-1": "27955",
+							"category": "clang-with-lto-ubuntu"
+						},
+						{
+							"column-1": "27520",
+							"category": "sanitizer-ppc64le-linux"
+						},
+						{
+							"column-1": "27424",
+							"category": "clang-cmake-armv7-selfhost-neon"
+						},
+						{
+							"column-1": "27232",
+							"category": "clang-cmake-armv8-lld"
+						},
+						{
+							"column-1": "27201",
+							"category": "clang-ppc64le-linux-multistage"
+						},
+						{
+							"column-1": "26000",
+							"category": "clang-cmake-aarch64-full"
+						},
+						{
+							"column-1": "25597",
+							"category": "llvm-clang-win-x-aarch64"
+						},
+						{
+							"column-1": "25498",
+							"category": "clang-cmake-armv7-selfhost"
+						},
+						{
+							"column-1": "24968",
+							"category": "lld-x86_64-win7"
+						},
+						{
+							"column-1": "24689",
+							"category": "clang-native-arm-lnt-perf"
+						},
+						{
+							"column-1": "24230",
+							"category": "clang-cmake-armv7-global-isel"
+						},
+						{
+							"column-1": "23574",
+							"category": "sanitizer-x86_64-linux-bootstrap-ubsan"
+						},
+						{
+							"column-1": "23327",
+							"category": "llvm-avr-linux"
+						},
+						{
+							"column-1": "21738",
+							"category": "clang-cmake-armv7-lnt"
+						},
+						{
+							"column-1": "21558",
+							"category": "clang-ppc64le-linux-lnt"
+						},
+						{
+							"column-1": "21466",
+							"category": "sanitizer-x86_64-linux-bootstrap"
+						},
+						{
+							"column-1": "21390",
+							"category": "clang-ppc64le-rhel"
+						},
+						{
+							"column-1": "21315",
+							"category": "clang-cmake-aarch64-global-isel"
+						},
+						{
+							"column-1": "21221",
+							"category": "clang-ppc64le-linux"
+						},
+						{
+							"column-1": "21207",
+							"category": "sanitizer-x86_64-linux"
+						},
+						{
+							"column-1": "21149",
+							"category": "clang-cmake-aarch64-quick"
+						},
+						{
+							"column-1": "20733",
+							"category": "clang-ppc64be-linux"
+						},
+						{
+							"column-1": "19804",
+							"category": "clang-cmake-armv7-quick"
+						},
+						{
+							"column-1": "19443",
+							"category": "clang-ppc64be-linux-multistage"
+						},
+						{
+							"column-1": "19220",
+							"category": "llvm-clang-win-x-armv7l"
+						},
+						{
+							"column-1": "18789",
+							"category": "clang-ppc64be-linux-lnt"
+						},
+						{
+							"column-1": "18563",
+							"category": "ppc64le-lld-multistage-test"
+						},
+						{
+							"column-1": "17261",
+							"category": "sanitizer-ppc64be-linux"
+						},
+						{
+							"column-1": "16619",
+							"category": "openmp-clang-x86_64-linux-debian"
+						},
+						{
+							"column-1": "15453",
+							"category": "clang-s390x-linux-multistage"
+						},
+						{
+							"column-1": "15250",
+							"category": "libc-x86_64-debian"
+						},
+						{
+							"column-1": "15209",
+							"category": "libcxx-libcxxabi-x86_64-linux-debian-noexceptions"
+						},
+						{
+							"column-1": "14369",
+							"category": "libcxx-libcxxabi-x86_64-linux-ubuntu-cxx2a"
+						},
+						{
+							"column-1": "14324",
+							"category": "libcxx-libcxxabi-x86_64-linux-ubuntu-cxx17"
+						},
+						{
+							"column-1": "14273",
+							"category": "libcxx-libcxxabi-x86_64-linux-ubuntu-asan"
+						},
+						{
+							"column-1": "14235",
+							"category": "libcxx-libcxxabi-x86_64-linux-ubuntu-ubsan"
+						},
+						{
+							"column-1": "14186",
+							"category": "libcxx-libcxxabi-x86_64-linux-ubuntu-cxx11"
+						},
+						{
+							"column-1": "14114",
+							"category": "libcxx-libcxxabi-x86_64-linux-ubuntu-gcc5-cxx11"
+						},
+						{
+							"column-1": "13933",
+							"category": "libcxx-libcxxabi-x86_64-linux-ubuntu-cxx03"
+						},
+						{
+							"column-1": "13834",
+							"category": "libcxx-libcxxabi-x86_64-linux-ubuntu-msan"
+						},
+						{
+							"column-1": "13493",
+							"category": "lldb-x64-windows-ninja"
+						},
+						{
+							"column-1": "13249",
+							"category": "lldb-x86_64-debian"
+						},
+						{
+							"column-1": "12180",
+							"category": "clang-with-thin-lto-ubuntu"
+						},
+						{
+							"column-1": "11943",
+							"category": "sanitizer-x86_64-linux-fuzzer"
+						},
+						{
+							"column-1": "11832",
+							"category": "lld-x86_64-freebsd"
+						},
+						{
+							"column-1": "11487",
+							"category": "lldb-aarch64-ubuntu"
+						},
+						{
+							"column-1": "11296",
+							"category": "sanitizer-x86_64-linux-android"
+						},
+						{
+							"column-1": "11274",
+							"category": "clang-cmake-x86_64-sde-avx512-linux"
+						},
+						{
+							"column-1": "11143",
+							"category": "fuchsia-x86_64-linux"
+						},
+						{
+							"column-1": "11048",
+							"category": "clang-cuda-build"
+						},
+						{
+							"column-1": "10755",
+							"category": "sanitizer-x86_64-linux-bootstrap-msan"
+						},
+						{
+							"column-1": "10112",
+							"category": "sanitizer-x86_64-linux-autoconf"
+						},
+						{
+							"column-1": "8465",
+							"category": "sanitizer-x86_64-linux-fast"
+						},
+						{
+							"column-1": "6953",
+							"category": "clang-s390x-linux"
+						},
+						{
+							"column-1": "6922",
+							"category": "clang-cmake-x86_64-avx2-linux"
+						},
+						{
+							"column-1": "6096",
+							"category": "clang-hexagon-elf"
+						},
+						{
+							"column-1": "5718",
+							"category": "openmp-gcc-x86_64-linux-debian"
+						},
+						{
+							"column-1": "4215",
+							"category": "clang-s390x-linux-lnt"
+						},
+						{
+							"column-1": "3914",
+							"category": "clang-x86_64-linux-abi-test"
+						},
+						{
+							"column-1": "3512",
+							"category": "clang-aarch64-linux-build-cache"
+						},
+						{
+							"column-1": "3484",
+							"category": "libcxx-libcxxabi-x86_64-linux-ubuntu-cxx14"
+						},
+						{
+							"column-1": "3349",
+							"category": "clang-armv7-linux-build-cache"
+						},
+						{
+							"column-1": "3127",
+							"category": "clang-x86_64-debian-fast"
+						},
+						{
+							"column-1": "3092",
+							"category": "clang-x86_64-debian-new-pass-manager-fast"
+						},
+						{
+							"column-1": "2590",
+							"category": "clang-atom-d525-fedora-rel"
+						},
+						{
+							"column-1": "1906",
+							"category": "lld-x86_64-darwin13"
+						},
+						{
+							"column-1": "1815",
+							"category": "lld-x86_64-ubuntu-fast"
+						},
+						{
+							"column-1": "1809",
+							"category": "llvm-clang-x86_64-expensive-checks-ubuntu"
+						},
+						{
+							"column-1": "1786",
+							"category": "clang-tools-sphinx-docs"
+						},
+						{
+							"column-1": "1429",
+							"category": "llvm-clang-x86_64-expensive-checks-debian"
+						},
+						{
+							"column-1": "1149",
+							"category": "libcxx-libcxxabi-x86_64-linux-debian"
+						}
+					]
+				}
+			);
+		</script>
+		
 		<title>Hank Quinlan, Horrible Cop</title>
+		<meta name="description" content="The longest time each builder was red during the week" />
+		
 	</head>
 	<body>
 		<nav>
@@ -19,6 +417,7 @@
     		<div class="blurb">
         		<h1>Hi there, I'm Hank Quinlan!</h1>
 				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+			<div id="chartdiv" style="width: 100%; height: 1200px; background-color: #FFFFFF;" ></div>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
 		<footer>
