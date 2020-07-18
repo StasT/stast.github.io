@@ -25,7 +25,7 @@ h1 {
 }
 p {
     font-size: 1.3em;
-    line-height: 1.3em;
+    line-height: 1.5em;
     color: #333;
 }
 footer {
@@ -33,13 +33,13 @@ footer {
     font-size: .8em;
 }
 
-ul.posts { 
+ul.post { 
     margin: 20px auto 40px; 
     font-size: 1.3em;
-    line-height: 1.3em;
+    line-height: 1.5em;
     color: #333;
 }
 
-ul.posts li {
+ul.post li {
     list-style: none;
 }
