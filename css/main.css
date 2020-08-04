@@ -65,3 +65,11 @@ hr.devider {
 iframe {
     margin: 16px auto 16px;
 }
+th, td {
+  padding: 5px;
+  text-align: left;
+  font-size: 14px;
+}
+tr:nth-child(even) {
+  background-color: #dddd;
+}
