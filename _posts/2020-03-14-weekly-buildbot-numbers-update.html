@@ -1,44 +1,261 @@
 ---
 layout: post
-title: "Buildbot numbers for the week of 03.08.2020 – 03.14.2020"
-date: 2020-03-14
+title: "Buildbot Numbers: May 2020 <i>VS</i> June 2020"
+date: 2020-08-15
 ---
 
 <p>Hello everyone,</p>
-<p>Here, at Access Softek we collect buildbot numbers we think the LLVM community would be interested to check. In this post we’d like to share the following stats for the period of 03.08.2020 – 03.14.2020:</p>
+<p>Here, at <b>Access Softek Toolchains</b> we collect buildbot numbers we think the LLVM community would be interested to check.</p>
+<p>In this report we’d like to share the following stats:</p>
 <ol class="blog">
 <li>The longest time each builder was red during the week;</li>
-<li>"Status change ratio" by active builder (percent of builds that changed the
-builder status from green to red or from red to green);</li>
+<li>"Status change ratio" by active builder (percent of builds that changed the builder status from green to red or from red to green);</li>
 <li>Number of commits by project;</li>
-<li>Number of completed builds, failed builds and an average build time for
-successful builds per active builder;</li>
-<li>Average waiting time for a revision to get build result per active builder
-(response time).</li>
+<li>Number of completed builds, failed builds and average build time for successful builds per active builder;</li>
+<li>Average waiting time for a revision to get build result per active builder (response time).</li>
 </ol>
-<p>You can also download these stats in .csv – please find the links below.</p>
 <hr class="devider">
-<h2>1. The Longest Time Each Builder <span style="color:#f44336">Was Red</span> During the Week</h2>
-<p class="small"><b>Period:</b> 03.08.2020 – 03.14.2020 | <b>Format:</b> HH:MM:SS</p>
-<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/1bb13b4e-3fba-45c3-bfef-81b550e3993f/page/xPUYB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<h3>Time Periods</h3>
+<p>To make it easy to compare the numbers, we pulled stats from equal monthly periods. In this report, we compare data in <b>May 2020</b> to <b>June 2020</b>. To be more precise, the dates are as follows:</p>
+<p><b>May 10, 2020 – June 6, 2020</b> (further in this report will be marked as <b>May 2020</b>)
+<b><i>VS</i></b>
+<b>June 7, 2020 – July 4, 2020</b> (further in this report will be marked as <b>June 2020</b>) </p>
+<hr class="devider">
+<h3>Raw Data</h3>
+<p>Feel free to download raw data in the .CSV format by clicking on the three dots in the top-right corner next to each chart you see below.</p>
+<hr class="devider">
+<h3>About Us</h3>
+<p>A few words about who we are and why we share these stats:</p>
+<p><b>Access Softek Toolchains</b> is an active contributor and a partner of the open technology ecosystem – the LLVM Project. We host the LLVM Lab in our office in Berkeley, California and manage the continued integration (LLVM buildbot) for all projects under the LLVM umbrella.</p>
+<p>We also help companies to drive adoption of the LLVM infrastructure and get the best possible software development tools. We have worked on a number of projects such as a front-end compiler, back-end code generation and optimization, linkers, code instrumentation, etc. for clients like Sony, Google and Nintendo.</p>
+<p>If you need help with developing, porting, representing and maintaining compiler toolchains based on Clang and LLVM, please <a href="mailto:clients@accesssoftek.com">drop us a line</a>. Also, please <a href="https://stast.github.io/about">see this page</a> for more details about our expertise.</p>
+<hr class="devider">
+<p><b>Feedback Wanted</b></p>
+<p>This is just a first report in a series we’ve planned ahead. We hope you’ll like the data and the way we’ve put it together.</p>
+<p>If you have any suggestions or ideas on how to improve the reports, or if there is other data you’d like to see in the coming reports, please <a href="mailto:statarin@accesssoftek.com">let us know</a>.</p>
+<p>Thank you,<br>Access Softek Toolchains Team</p>
+<hr class="devider">
+<h2>1. The Longest Time Each Builder <span style="color:#f44336">Was Red</span> During the Month</h2>
+<p class="small"><b>Period:</b> May 10, 2020 – June 6, 2020 (<b>May 2020</b>) <i>VS</i> June 7, 2020 – July 4, 2020 (<b>June 2020</b>)</p>
+<p class="small"><b>Format:</b> HH:MM:SS</p>
+<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/63f11397-f2e4-4ebe-95fe-86345ac88be8/page/xlgaB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<p>As seen from the chart above, in May 2020 the longest time being red by far were the following builders: </p>
+<table style="width:100%">
+  <tr>
+    <th>Builder Name</th>
+    <th>Was Red, May 2020 (HH:MM:SS)</th>
+  </tr>
+  <tr>
+    <td>llvm-sphinx-docs</td>
+    <td>135:14:21</td>
+  </tr>
+  <tr>
+    <td>libcxx-libcxxabi-libunwind-armv7-linux-noexceptions</td>
+     <td>130:46:04</td>
+  </tr>
+  <tr>
+    <td>libcxx-libcxxabi-libunwind-armv7-linux</td>
+    <td>128:34:27</td>
+  </tr>
+  <tr>
+    <td>libcxx-libcxxabi-libunwind-armv8-linux</td>
+    <td>119:51:43</td>
+  </tr>
+  <tr>
+    <td>libcxx-libcxxabi-libunwind-armv8-linux-noexceptions</td>
+    <td>119:51:27</td>
+  </tr>
+  <tr>
+    <td>clang-native-arm-lnt-perf</td>
+    <td>115:00:42</td>
+  </tr>
+  <tr>
+    <td>sanitizer-x86_64-linux</td>
+    <td>109:51:18</td>
+  </tr>
+</table>
+<p>While in June 2020, these were the following builders: </p>
+<table style="width:100%">
+  <tr>
+    <th>Builder Name</th>
+    <th>Was Red, May 2020 (HH:MM:SS)</th>
+  </tr>
+  <tr>
+    <td>llvm-clang-win-x-armv7</td>
+    <td>139:09:35</td>
+  </tr>
+    <td>lld-x86_64-freebsd</td>
+     <td>109:33:39</td>
+  </tr>
+    <td>sanitizer-x86_64-linux-android</td>
+    <td>97:09:18</td>
+  </tr>
+    <td>mlir-nvidia</td>
+    <td>96:23:08</td>
+  </tr>
+</table>
+<hr class="devider">
+<p>The least time being red in May 2020 goes to:</p>
+<table style="width:100%">
+  <tr>
+<th>	Builder Name	</th>
+<th>	Was Red, June 2020 (HH:MM:SS)	</th>
+  </tr>
+  <tr>
+<td>	libcxx-libcxxabi-x86_64-linux-debian-noexceptions	</td>
+<td>	00:20:29	</td>
+  </tr>
+  <tr>
+<td>	libc-x86_64-debian	</td>
+<td>	00:49:26	</td>
+  </tr>
+  <tr>
+<td>	openmp-clang-x86_64-linux-debian	</td>
+<td>	00:58:35	</td>
+  </tr>
+  <tr>
+<td>	openmp-gcc-x86_64-linux-debian	</td>
+<td>	00:59:47	</td>
+  </tr>
+  <tr>
+<td>	clang-aarch64-linux-build-cache	</td>
+<td>	01:02:41	</td>
+  </tr>
+  <tr>
+<td>	lld-perf-testsuite	</td>
+<td>	01:03:20	</td>
+  </tr>
+</table>
+<p>And the least time being red in June 2020 were the following builders:</p>
+<table style="width:100%">
+<tr>
+<td><strong>Builder Name</strong></td>
+<td><strong>Was Red, June 2020 (HH:MM:SS)</strong></td>
+</tr>
+<tr>
+<td>lld-perf-testsuite</td>
+<td>01:32:57</td>
+</tr>
+<tr>
+<td>ml-opt-devrel-x86-64</td>
+<td>01:33:11</td>
+</tr>
+<tr>
+<td>openmp-clang-x86_64-linux-debian</td>
+<td>01:43:54</td>
+</tr>
+<tr>
+<td>clang-cmake-armv7-selfhost-neon</td>
+<td>02:01:02</td>
+</tr>
+<tr>
+<td>ml-opt-rel-x86-64</td>
+<td>02:35:30</td>
+</tr>
+</table>
+<hr class="devider">
+<p>The largest shifts for the time a builder was red in June over May 2020 are:</p>
+
+<table style="width:100%">
+	<tr>
+<th>	Builder Name	</th>
+<th>	Was Red, May 2020 (HH:MM:SS)	</th>
+<th>	Was Red, June 2020 (HH:MM:SS)	</th>
+<th>	Change (HH:MM:SS)	</th>
+	</tr>
+	<tr>
+<td>	libcxx-libcxxabi-libunwind-armv7-linux	</td>
+<td>	128:34:27	</td>
+<td>	16:43:02	</td>
+<td>	-111:51:25	</td>
+	</tr>
+	<tr>
+<td>	clang-native-arm-lnt-perf	</td>
+<td>	115:00:42	</td>
+<td>	03:18:34	</td>
+<td>	-111:42:08	</td>
+	</tr>
+	<tr>
+<td>	libcxx-libcxxabi-libunwind-armv8-linux	</td>
+<td>	119:51:43	</td>
+<td>	14:10:40	</td>
+<td>	-105:41:03	</td>
+	</tr>
+	<tr>
+<td>	libcxx-libcxxabi-libunwind-armv7-linux-noexceptions	</td>
+<td>	130:46:04	</td>
+<td>	48:08:45	</td>
+<td>	-82:37:19	</td>
+	</tr>
+	<tr>
+<td>	llvm-sphinx-docs	</td>
+<td>	135:14:21	</td>
+<td>	56:14:14	</td>
+<td>	-79:00:07	</td>
+	</tr>
+</table>
+<br>
+<br>
+<table style="width:100%">
+	<tr>
+<th>	Builder Name	</th>
+<th>	Was Red, May 2020 (HH:MM:SS)	</th>
+<th>	Was Red, June 2020 (HH:MM:SS)	</th>
+<th>	Change (HH:MM:SS)	</th>
+	</tr>
+	<tr>
+<td>	lld-x86_64-freebsd	</td>
+<td>	03:27:43	</td>
+<td>	109:33:39	</td>
+<td>	+106:05:56	</td>
+	</tr>
+	<tr>
+<td>	llvm-clang-win-x-armv7	</td>
+<td>	39:58:13	</td>
+<td>	139:09:35	</td>
+<td>	+99:11:22	</td>
+	</tr>
+	<tr>
+<td>	mlir-nvidia	</td>
+<td>	20:09:29	</td>
+<td>	55:48:49	</td>
+<td>	+76:13:39	</td>
+	</tr>
+	<tr>
+<td>	sanitizer-x86_64-linux-android	</td>
+<td>	22:48:06	</td>
+<td>	97:09:18	</td>
+<td>	+74:21:12	</td>
+	</tr>
+	<tr>
+<td>	clang-s390x-linux-multistage	</td>
+<td>	11:20:51	</td>
+<td>	81:56:32	</td>
+<td>	+70:35:41	</td>
+	</tr>
+</table>
 <hr class="devider">
 <h2>2. Status Change Ratio</h2>
 <p class="small">"Status change ratio" by active builder (percent of builds that changed the
 builder status from green to red or from red to green).</p>
 <p class="small"><b>Period:</b> 03.08.2020 – 03.14.2020</p>
-<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/786cb850-6392-408d-9d2b-a29ccba4471d/page/mEjYB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/9941d9f5-c597-4300-85a5-64bdbec8aea9/page/e7YaB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<hr class="devider">
+<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/b7b280e8-b865-40fa-8ebe-a12f2b0135c6/page/bVaaB" frameborder="0" style="border:0" allowfullscreen></iframe>
 <hr class="devider">
 <h2>3. Number of Commits by Project</h2>
 <p class="small"><b>Period:</b> 03.08.2020 – 03.14.2020</p>
-<iframe width="800" height="400" src="https://datastudio.google.com/embed/reporting/4763a69b-328b-4c74-b1eb-351da453e2e4/page/78oYB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/fd91868e-c60f-4cdf-a2d8-a532349c852e/page/kneaB" frameborder="0" style="border:0" allowfullscreen></iframe>
 <hr class="devider">
 <h2>4. Number of Completed Builds, Failed Builds and Average Build Time for
 Successful Builds Per Active Builder</h2>
 <p class="small"><b>Period:</b> 03.08.2020 – 03.14.2020</p>
-<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/6cc384c4-07eb-4876-a45b-7d2d270d7149/page/xSqYB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/361bfc42-2b01-40f8-ba24-7ddc44f25c86/page/T8aaB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<hr class="devider">
+<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/748ad9c3-2292-49a8-8bf5-172d715ebe7a/page/dIbaB" frameborder="0" style="border:0" allowfullscreen></iframe>
 <hr class="devider">
 <h2>5. Average Waiting Time for a Revision to Get Build Result Per Active Builder
 (Response Time)</h2>
 <p class="small"><b>Period:</b> 03.08.2020 – 03.14.2020</p>
-<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/1ee22be4-4e3a-4323-b11d-60884cc170fd/page/OarYB" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/5670fd5d-61f9-4e8a-a2f8-ee3fccbba051/page/3ZfaB" frameborder="0" style="border:0" allowfullscreen></iframe>
 <hr class="devider">
